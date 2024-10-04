@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper-container">
+    <div class="container">
+        <div class="content" id="product-list">
+            <!-- Product items will be added here by JavaScript -->
+        </div>
+    </div>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- { name: "Product Name 10", image: "https://via.placeholder.com/150", link: "#" } -->
+<!--
+<DIV>NỘI DUNG POST
+</DIV>
+<DIV>
+<div class="wrapper-container">
+    <div class="container">
+        <div class="content" id="product-list">
+         
+        </div>
+    </div>
+ </div>
+<STYLE>
+
+.wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: NONE;
+}
+
+.wrapper-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: NONE;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-container .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.wrapper-container .content-item {
+    background-color: NONE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+
+.wrapper-container .content-item img {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.wrapper-container .content-item .product-name {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.wrapper-container .content-item .buy-button {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.wrapper-container .content-item .buy-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .wrapper-container .content {
+        grid-template-columns: 2fr;
+    }
+}
+</STYLE>
+<SCRIPT>
+const products = [
+    { name: "Nước Hoa Cho Nam Bí Quyết Sự Tự Tin - Sexy Men, Active Men, Strong Men", image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw48u3aiao61d1.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F1124101525%2F24403314483" },
+    { name: "Nước Hoa Hồng Dear Klairs Supple Preparation Unscented Toner Không Mùi 180ml", image: "https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-ly7dgef9duw106.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F1311324099%2F26556369167" },
+    { name: "Ốp lưng Iphone 15 14 12 13 11 Pro Max IP 7 8 Plus Iphon X Xs XR Xs Max Silicon Softcase", image: "https://down-vn.img.susercontent.com/file/sg-11134201-7rcer-lthja9ra4pxi32.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F117097312%2F25521652831" },
+    { name: "Thanh lăn mặt nạ đất sét The Originote B3 Clay Stick se khít lỗ chân lông,cải thiện mụn 30g", image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltp0az0g5zbh63.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F849452085%2F22386117438" },
+    { name: "ICON Ô dù che mưa nắng cầm tay tự động 2 chiều đóng mở", image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltn8aqyagl56eb.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F1158229156%2F25571555185" },
+    { name: "Bodymist Nam Nữ Toàn Thân Lưu Hương 6 Giờ - Nước Hoa Hẹn Hò BODYMISS 105ml (Chai)", image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llszfjzmt8f304.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F341325550%2F17691412441" },
+    { name: "Pin Sạc Dự Phòng Hoco SU02 20000mAh 2 Output USB 2 Input Micro Type-C", image: "https://down-vn.img.susercontent.com/file/sg-11134201-7rd4f-lx2wc59gyxk048.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F742040969%2F24732847800" },
+    { name: "VEECCI Bảng Phấn Bắt Sáng Và Tạo Khối Tự Nhiên Lâu Trôi Chống Nước 9g", image: "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-lxnfierwjyn767.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F772927739%2F20189316664" },
+    { name: "KIQUNE Nồi Lẩu Điện Mini IGN23A10ZK", image: "https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-lnql4el760eg39.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F984705782%2F22384833055" },
+    { name: "Tinh chất dưỡng sáng SKIN1004 Madagascar Centella Tone Brightening Capsule Ampoule 100ml", image: "https://down-vn.img.susercontent.com/file/vn-11134201-23020-0rmityyzgynvf5.webp", link: "https://click.adpia.vn/tracking.php?m=shopee&a=A100116734&l=9999&l_cd1=3&l_cd2=0&u_id=&tu=https%3A%2F%2Fshopee.vn%2Fproduct%2F251295945%2F14802177729" }
+];
+
+const productList = document.getElementById('product-list');
+function displayRandomProducts() {
+    productList.innerHTML = '';
+    const randomProducts = products.sort(() => 0.5 - Math.random()).slice(0, 4);
+    randomProducts.forEach(product => {
+        const contentItem = document.createElement('div');
+        contentItem.classList.add('content-item');
+        const img = document.createElement('img');
+        img.src = product.image;
+        img.alt = 'Product Image';
+        const productName = document.createElement('h3');
+        productName.classList.add('product-name');
+        productName.textContent = product.name;
+        const buyButton = document.createElement('a');
+        buyButton.href = product.link;
+        buyButton.classList.add('buy-button');
+        buyButton.textContent = 'Mua ngay';
+        buyButton.target = '_blank';
+        contentItem.appendChild(img);
+        contentItem.appendChild(productName);
+        contentItem.appendChild(buyButton);
+        productList.appendChild(contentItem);
+    });
+}
+displayRandomProducts();
+setInterval(displayRandomProducts, 5000);
+</SCRIPT>
+</DIV> -->
+

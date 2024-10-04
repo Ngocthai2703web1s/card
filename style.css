@@ -1,0 +1,89 @@
+/* Bọc ngoài toàn bộ container để căn giữa */
+.wrapper-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    min-height: 80vh; /* Đảm bảo chiều cao toàn bộ viewport */
+    background-color: NONE; /* Màu nền chỉ áp dụng cho khu vực container */
+}
+
+.wrapper-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px; /* Đặt chiều rộng tối đa cho container */
+    padding: 20px;
+    background-color: NONE;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid cho các sản phẩm bên trong container */
+.wrapper-container .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia làm 4 cột */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    width: 100%;
+}
+
+/* Cấu trúc của từng item sản phẩm */
+.wrapper-container .content-item {
+    background-color: NONE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Căn giữa các phần tử bên trong */
+    height: 400px; /* Chiều cao của mỗi sản phẩm */
+}
+
+/* Ảnh sản phẩm */
+.wrapper-container .content-item img {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: contain; /* Đảm bảo ảnh giữ tỷ lệ */
+}
+
+/* Tên sản phẩm, với giới hạn ký tự và ẩn phần còn lại */
+.wrapper-container .content-item .product-name {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Giới hạn hiển thị 3 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Thêm dấu ba chấm nếu quá dài */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+/* Nút mua hàng */
+.wrapper-container .content-item .buy-button {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.wrapper-container .content-item .buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Thiết kế responsive cho màn hình nhỏ */
+@media (max-width: 600px) {
+    .wrapper-container .content {
+        grid-template-columns: 2fr; /* Chuyển sang 1 cột trên màn hình nhỏ */
+    }
+}
