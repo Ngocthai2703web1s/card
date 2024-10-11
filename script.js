@@ -1,7 +1,7 @@
   // Danh sách sản phẩm (ví dụ có 10 sản phẩm)
   // { name: "#", image: "#", link: "#" }
 const products = [
-        {name: "Áo Cardigan unisex nam nữ, chất nỉ tăm dày dặn, áo khoác nhẹ mùa thu đông", image: "https://tinyurl.com/3env3xmy", link: "https://tinyurl.com/bdzmv33v" },
+	{name: "Áo Cardigan unisex nam nữ, chất nỉ tăm dày dặn, áo khoác nhẹ mùa thu đông", image: "https://tinyurl.com/3env3xmy", link: "https://tinyurl.com/bdzmv33v" },
 	{name: "Áo sweater form rộng ESTDAB nam nữ", image: "https://tinyurl.com/2p6vhnra", link: "https://tinyurl.com/mv3csar2" },
 	{name: "Bé dễ thương hoạt hình búp bê sang trọng an toàn mềm mại", image: "https://tinyurl.com/86yaddb5", link: "https://tinyurl.com/3xnr2aet" },
 	{name: "Bodymist Nam Nữ Toàn Thân Lưu Hương 6 Giờ - Nước Hoa Hẹn Hò BODYMISS 105ml (Chai)", image: "https://tinyurl.com/3c82rc24", link: "https://tinyurl.com/23cn7spf" },
